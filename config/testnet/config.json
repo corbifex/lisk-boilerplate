@@ -1,0 +1,88 @@
+{
+  "app": {
+    "label": "lisk-boilerplate",
+    "version": "2.0.0-alpha.10",
+    "minVersion": "2.0.0",
+    "protocolVersion": "1.0",
+    "genesisConfig": {
+      "BLOCK_TIME": 10,
+      "EPOCH_TIME": "2019-06-05T00:00:00.000Z",
+      "REWARDS": {
+        "MILESTONES": [
+          "500000000",
+          // Initial Reward
+          "400000000",
+          "300000000",
+          "200000000",
+          "100000000"
+        ],
+        "OFFSET": 100,
+        // Start rewards at first block of the second round
+        "DISTANCE": 300000
+        // Distance between each milestone
+      }
+    }
+  },
+  "components": {
+    "logger": {
+      "consoleLogLevel": "info"
+    },
+    "storage": {
+      "port": 5432,
+      "user": "postgres",
+      "password": "",
+      "logFileName": "logs/db.log",
+      "database": "liskboilerplate",
+      "host": "localhost"
+    }
+  },
+  "modules": {
+    "http_api": {
+      "httpPort": 7000,
+      "access": {
+        "public": true
+      }
+    },
+    "chain": {
+      "forging": {
+        "force": true,
+        "delegates": [
+          {
+            "encryptedPassphrase": "iterations=1000000&cipherText=36e594fdd63b64486d27acc0bed8892f974b9cb508afa83110763167fb7dc0be1d8158f504655f1816531a3feb31a07880cf1191c59e55316e67a6d549e9ffd4bb527bbf16f5fa576720d3&iv=519641c1ab24e67d55a39735&salt=845f9f73e7e6974206c32136454ea92a&tag=e93d1565e990ebbd4f876284f7f549bd&version=1",
+            "publicKey": "f2a76fd530d82b8b65e5c85ecbacf2ce3d0475d7b075aeb9452b587450a3bbcc"
+          },
+          {
+            "encryptedPassphrase": "iterations=1000000&cipherText=e7dbd61460de9d58960aed964089d221d47b5f40913618c7ca2826d8e2ab001bf140fb2a1fa7e81cc06d06562dc904441cf10c4bac8e125f8da8ccfcfd1581a786dcbe2b51b70b8d8dc42b7ceb&iv=eb40aeb6d82fdc4067117fd2&salt=87fa9acab91964eba27df2477b0b962b&tag=dc6f3be7d88807cbf09cad761a43190c&version=1",
+            "publicKey": "8ec5c58c5f877ced4a97d8cf87194cabb21018258abb1651304965ef38cfd45d"
+          },
+          {
+            "encryptedPassphrase": "iterations=1000000&cipherText=d71f02fb57a812d3ed81c93ddc042e8c986115f1291f11aa6d4bf375936a140ff29414948130661f5df7e2486974dd945619f553eb3c8934f8bf2cf041d5f8376f8f9cbcddd4f084026393da&iv=0dd0839d64f1e81d38490674&salt=597d114aa1d847d4066a5bafec948b99&tag=5c5b61694c1f75e2d85dc0c90af04211&version=1",
+            "publicKey": "d70a0eef46d4b4bcf27ae4539114b2ee4f6c22a63ebd99ebdbe3b7dc42a565bb"
+          },
+          {
+            "encryptedPassphrase": "iterations=1000000&cipherText=4248a9356a5f49203cbe66a2c203347e067e6b6c706751ff0576d42805ff1c3d871da28315455297fa76f3096bce607c66540e6f9f452a58f4f0e095c651e915f8bc714058544c7585&iv=747657cf2575f2e40a646df2&salt=446029caa11b027b9e1425e15b43f4f2&tag=b36a88ebdcd0aee8cee4bb5ca3f89ed8&version=1",
+            "publicKey": "14639814490d9d5581f03f81d93df16f2fe2a1ef2ad38405262a6c8483acb4b8"
+          },
+          {
+            "encryptedPassphrase": "iterations=1000000&cipherText=de129cf4062735c629d45ba1d2e914e6d99d661e0c6e1c448358e3c87b7c89495a8c24906c4bc3358d92a94e29eefef5b4b959c70f4adc76d0d0ee1557dac36e9334c1ec4616f3&iv=085c2da8b537e57af6f75170&salt=a850288beff234f38dd72f00a159bb8b&tag=f2299ff125f0e9ba30f52f908a556485&version=1",
+            "publicKey": "a327e4daf42d1e0729035fde196479a440d4bb2d185b4e1b1422504bbf2c76a0"
+          },
+          {
+            "encryptedPassphrase": "iterations=1000000&cipherText=06f14e138317c2605a76acc965e69bfeb4404f964bc419c3058d3b0d400ff024e0ac360e912a1157222cd645724e73f99ee72c936397939165e439089f327a1a781916aa4101cf&iv=73f28868b4f33e9947e2ae13&salt=3a399459da9fc2f3f17273d732b97fe3&tag=80a06dd19f48dc8067b24042c1211976&version=1",
+            "publicKey": "0e38fdb863834f4407fd9e825940b6ed36c174a3c4cad487a148e71f65ea07d4"
+          }
+        ],
+        "defaultPassword": "nasty oak clean income imitate"
+      }
+    },
+    "network": {
+      "wsPort": 5000,
+      "seedPeers": [
+        {
+          "ip": "127.0.0.1",
+          "wsPort": 5000
+        }
+      ]
+    }
+  }
+}
