@@ -33,7 +33,7 @@
       "password": "",
       "logFileName": "logs/db.log",
       "database": "liskboilerplate",
-      "host": "192.168.2.82"
+      "host": "127.0.0.1"
     }
   },
   "modules": {

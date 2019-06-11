@@ -1,3 +1,4 @@
+*.js
 # General
 .DS_Store
 .project
