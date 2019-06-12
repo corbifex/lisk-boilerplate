@@ -1,4 +1,4 @@
-# Lisk Boilerplate
+# Lisk SDK Boilerplate
 A Lisk node boilerplate to start development.
 
 **This is by no means meant to support the production phase yet.**
@@ -8,7 +8,7 @@ git clone git@github.com:corbifex/lisk-boilerplate.git
 
 ## Wizard
 If you want to use a GUI to configure this boilerplate goto
-[corbifex/lisk-boilerplate-wizard](https://github.com/corbifex/lisk-boilerplate-wizard/)
+[Lisk SDK Boilerplate configurator](https://delegate.moosty.com/lisk-sdk-configurator/)
 
 
 # Todo's
